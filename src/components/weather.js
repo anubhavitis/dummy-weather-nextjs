@@ -17,6 +17,7 @@ const Weather = ({ city }) => {
 
         console.log(url)
 
+        // To fetch data from the WeatherAPI
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
@@ -39,7 +40,7 @@ const Weather = ({ city }) => {
         };
 
         fetchData();
-    }, []);
+    }, [city]);
 
     if (loading) {
         return <p>Loading...</p>;
